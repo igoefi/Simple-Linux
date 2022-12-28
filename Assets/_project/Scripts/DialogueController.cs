@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PastTextsController : MonoBehaviour
+public class DialogueController : MonoBehaviour
 {
     [SerializeField] InputText _inputText;
     [SerializeField] BeautyOutput _outputText;
 
-    [SerializeField] Dialogue2 _dialogue;
+    private static Dialogue _dialogue;
 
     [SerializeField] Vector2 _inputIndent;
 
@@ -15,19 +15,35 @@ public class PastTextsController : MonoBehaviour
 
     private bool _start = false;
 
+    private bool _isOutputPast;
+
     private void Start()
     {
-        _inputText.EndWriteText.AddListener(SetTurn);
-        _outputText.EndWriteText.AddListener(SetTurn);
+        _dialogue = null;
 
-        _dialogue.Setup();
+        _inputText.EndWriteText.AddListener(NextTurn);
+        InputSystem.EnterEvent.AddListener(SkipPast);
 
-        SetTurn();
+        _isOutputPast = true;
     }
 
-    private void SetTurn()
+    public static void SetDialogue(Dialogue dialogue)
     {
-        _dialogue.GetQueues(out Queue<string> texsts, out Queue<Dialogue2.Past> parts);
+        if(dialogue != null)
+            _dialogue = dialogue;
+    }
+
+    private void SkipPast()
+    {
+        if(_isOutputPast && _dialogue != null)
+            NextTurn();
+    }
+
+    private void NextTurn()
+    {
+        _isOutputPast = false;
+
+        _dialogue.GetQueues(out Queue<string> texsts, out Queue<Dialogue.Past> parts);
 
         if (texsts.Count == 0)
         {
@@ -35,10 +51,12 @@ public class PastTextsController : MonoBehaviour
             return;
         }
 
-        if (parts.Dequeue() == Dialogue2.Past.Output)
+        if (parts.Dequeue() == Dialogue.Past.Output)
         {
             if(_outputText != null)
                 _outputText.SetText(texsts.Dequeue());
+
+            _isOutputPast = true;
         }
         else
         {
@@ -54,7 +72,11 @@ public class PastTextsController : MonoBehaviour
                 _inputText.Start(texsts.Dequeue());
             }
         }
+
+        if (texsts.Count == 0)
+            _dialogue = null;
     }
+
     private void CreateNewInput()
     {
         InputText input = Instantiate(_inputText, transform);
