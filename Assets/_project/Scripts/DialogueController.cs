@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,13 +28,13 @@ public class DialogueController : MonoBehaviour
 
     public static void SetDialogue(Dialogue dialogue)
     {
-        if(dialogue != null)
+        if (dialogue != null)
             _dialogue = dialogue;
     }
 
     private void SkipPast()
     {
-        if(_isOutputPast && _dialogue != null)
+        if (_isOutputPast && _dialogue != null)
             NextTurn();
     }
 
@@ -53,7 +52,7 @@ public class DialogueController : MonoBehaviour
 
         if (parts.Dequeue() == Dialogue.Past.Output)
         {
-            if(_outputText != null)
+            if (_outputText != null)
                 _outputText.SetText(texsts.Dequeue());
 
             _isOutputPast = true;

@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using TMPro;
 
 public class InputText : MonoBehaviour
 {
-    public UnityEvent EndWriteText {get; private set; } = new();
+    public UnityEvent EndWriteText { get; private set; } = new();
 
     [SerializeField] TMP_Text _TMP;
 

@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -28,7 +26,7 @@ public class Dialogue
 
     public void Setup()
     {
-        for(int i = 0; i < _texts.Length; i++)
+        for (int i = 0; i < _texts.Length; i++)
         {
             _texts[i] = _texts[i].Substring(_numCharsToDelete);
         }

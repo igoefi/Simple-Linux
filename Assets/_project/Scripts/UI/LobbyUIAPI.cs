@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LobbyUIAPI : MonoBehaviour
 {
     [SerializeField] GameObject BGImage;
+
+    private void Start() =>
+        LavitoAPI.BuySomething.Invoke();
 
     public void OpenWindow(GameObject window)
     {
