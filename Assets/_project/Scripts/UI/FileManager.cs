@@ -30,9 +30,26 @@ public class FileManager : MonoBehaviour
                 SerializationController.SaveFile(file.GetData(), fileName);
     }
 
+    public void ResetSaves()
+    {
+        Debug.Log("Dekete in FM");
+        foreach (var file in _files)
+            File.Delete(Application.persistentDataPath + "/" + file.GetFileName());
+    }
+
     private void Read(FileAbstraction file)
     {
-        Data ReadFile = SerializationController.ReadFile(file.GetFileName(), (LavitoPositionsFile)file != null);
+        Data ReadFile = null;
+        try
+        {
+            var data = (LavitoPositionsFile)file;
+            ReadFile = SerializationController.ReadFile(file.GetFileName(), (LavitoPositionsFile)file != null);
+        }
+        catch
+        {
+            ReadFile = SerializationController.ReadFile(file.GetFileName(), false);
+        }
+
 
         file.SetData(ReadFile);
     }

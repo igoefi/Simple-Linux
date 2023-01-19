@@ -12,7 +12,7 @@ public class LavitoPositionsFile : FileAbstraction
 
     LavitoPositionsFile()
     {
-        _fileName = "Esss.xml";
+        _fileName = "Lavito.xml";
         SaveEvent.AddListener(Save);
     }
     

@@ -51,3 +51,7 @@ public class TaskTreeData : Data
     }
 }
 
+public class MoneyData : Data
+{
+    public int Money;
+}

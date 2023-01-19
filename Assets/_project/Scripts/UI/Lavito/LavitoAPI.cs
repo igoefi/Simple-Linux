@@ -8,6 +8,7 @@ public class LavitoAPI : MonoBehaviour
     [SerializeField] GameObject _BGCharter;
     [SerializeField] LavitoPositionsFile lavitoPositions;
     [SerializeField] PositionSelector positionSelector;
+    [SerializeField] MoneyFile _money;
 
     void OnEnable() =>
         positionSelector.SetPositions(positionSelector.IsInterier ? lavitoPositions.GetInteriers()
@@ -35,6 +36,7 @@ public class LavitoAPI : MonoBehaviour
 
     public void Buy(Position position)
     {
+        if (!_money.PlusMoney(-position.GetPrice())) return;
         position.SetBuyIsTrue();
         BuySomething.Invoke();
     }

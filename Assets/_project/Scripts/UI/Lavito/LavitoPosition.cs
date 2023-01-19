@@ -32,6 +32,11 @@ public class LavitoPosition
         LavitoPositionsFile.SaveEvent.Invoke();
     }
 
+    public Sprite GetSprite()
+    {
+        return _image;
+    }
+
     public bool Compare(string name) 
     {
         return name == _name;

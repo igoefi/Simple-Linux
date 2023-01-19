@@ -15,13 +15,10 @@ public class ObjectAvaker : MonoBehaviour
     {
         LavitoPosition[] objects = _file.GetInteriers();
 
-        foreach (InterierObject obj in _objects)
+        foreach (var obj in _objects)
             foreach (LavitoPosition fileObj in objects)
                 if (fileObj.Compare(obj.getName()) && fileObj.IsBuy == true)
-                {
                     obj.gameObject.SetActive(true);
-                    break;
-                }
     }
 
 }

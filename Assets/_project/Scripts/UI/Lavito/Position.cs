@@ -11,7 +11,7 @@ public class Position : MonoBehaviour
     [SerializeField] Image _image;
 
     private LavitoPosition _position;
-
+    private int _intPrice;
     public void SetPosition(LavitoPosition position)
     {
         position.GetParametrs(out string name, out string description, out Sprite sprite, out int price, out bool isBuy);
@@ -21,6 +21,7 @@ public class Position : MonoBehaviour
         _image.sprite = sprite;
 
         _price.text = !isBuy ? price.ToString() : "Куплено за ";
+        _intPrice = price;
     }
 
     public void SetBuyIsTrue()
@@ -33,5 +34,9 @@ public class Position : MonoBehaviour
     {
         if (_position.IsBuy)
             _price.text = "Куплено за ";
+    }
+    public int GetPrice()
+    {
+        return _intPrice;
     }
 }
