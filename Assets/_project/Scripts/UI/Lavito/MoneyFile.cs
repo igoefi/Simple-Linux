@@ -9,8 +9,11 @@ public class MoneyFile : FileAbstraction
 
     public static int Money { get; private set; }
 
-    MoneyFile() =>
+    MoneyFile()
+    {
         _fileName = "Money.xml";
+        Money = 0;
+    }
 
     public bool PlusMoney(int moneyPlus)
     {
