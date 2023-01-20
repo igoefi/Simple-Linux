@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public abstract class FileAbstraction : MonoBehaviour
 {
-    protected string _fileName = "y.json";
+    protected string _fileName = "file.json";
 
     public string GetFileName()
     {

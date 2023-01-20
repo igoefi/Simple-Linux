@@ -5,6 +5,11 @@ public class TaskTreeFile : FileAbstraction
 {
     [SerializeField] TaskTreePoint[] _points;
 
+    public TaskTreeFile()
+    {
+        _fileName = "TaskTree.json";
+    }
+
     public override void SetData(Data data)
     {
         var needFile = (TaskTreeData)data;

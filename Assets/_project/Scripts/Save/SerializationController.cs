@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class SerializationController : MonoBehaviour
 {
-    public static Data ReadFile(string fileName, bool isLavito)
+    public static Data ReadFile(string fileName, Type type)
     {
         string filePath = Application.persistentDataPath + "/" + fileName;
         Debug.Log(filePath);
 
-        Type type = isLavito ? typeof(LavitoData) : typeof(MoneyData);
         XmlSerializer serializer = new(type);
         Stream stream = File.OpenRead(filePath);
 
@@ -24,28 +23,8 @@ public class SerializationController : MonoBehaviour
         string filePath = Application.persistentDataPath + "/" + fileName;
         if (File.Exists(filePath)) File.Delete(filePath);
 
-        Type type;
-        try
-        {
-            LavitoData data = (LavitoData)file;
-            type = typeof(LavitoData);
-        }
-        catch
-        {
-            type = typeof(MoneyData);
-        }
-        /*
-       Type type;
-         
-       if (file != null)
-           type = typeof(LavitoData);
-       else if ((MoneyData)file != null)
-           type = typeof(MoneyData);
-       else if ((TaskTreeData)file != null)
-           type = typeof(TaskTreeData);
-       else
-           return;
-        */
+        Type type = file.GetType(); ;
+
         var serializer = new XmlSerializer(type);
         var writer = File.OpenWrite(filePath);
 

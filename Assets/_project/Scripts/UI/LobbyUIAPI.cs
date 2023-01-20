@@ -5,10 +5,13 @@ public class LobbyUIAPI : MonoBehaviour
 {
     [SerializeField] GameObject _BGImage;
     [SerializeField] FileManager _manager;
-
-    private void Start() =>
+    [SerializeField] VolumeSetter _setter;
+    private void Start()
+    {
         LavitoAPI.BuySomething.Invoke();
-
+        if (_setter != null)
+            _setter.gameObject.SetActive(true);
+    }
     public void OpenWindow(GameObject window)
     {
         window.SetActive(true);
