@@ -4,23 +4,16 @@ public class TaskTreePoint : MonoBehaviour
 {
     [SerializeField] string _levelName;
 
-    [SerializeField] float _maxMoney;
-    [SerializeField] float _minMoney;
-    [SerializeField] float _maxNormalTime;
+    [SerializeField] int _money;
 
-    public Time Time { get; private set; } = new();
-    public float MoneyTaken { get; private set; } = 0;
-    public bool IsPassed { get; private set; } = false;
+    private bool _isPassed;
 
-    public void SetIsPassedTrue(Time time, float moneyTaken)
-    {
-        IsPassed = true;
-        Time= time;
-        MoneyTaken = moneyTaken;
-    }
+    public void SetIsPassedTrue() => _isPassed = true;
 
-    public string GetLevelName()
-    {
-        return _levelName;
-    }
+    public bool GetIsPassed() => _isPassed;
+
+    public int GetMoney() => _money;
+
+    public string GetLevelName() => _levelName;
+
 }

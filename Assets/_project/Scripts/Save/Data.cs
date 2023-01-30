@@ -44,9 +44,8 @@ public class TaskTreeData : Data
             _points.Add(new TaskTreePointData
             {
                 Name = point.GetLevelName(),
-                MoneyTaken = point.MoneyTaken,
-                IsPassed = point.IsPassed,
-                Time = point.Time
+                Money = point.GetMoney(),
+                IsPassed = point.GetIsPassed(),
             });
     }
 }

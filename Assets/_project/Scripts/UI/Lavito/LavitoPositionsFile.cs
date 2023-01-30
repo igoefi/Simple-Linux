@@ -33,10 +33,8 @@ public class LavitoPositionsFile : FileAbstraction
 
     public override void SetData(Data data)
     {
-        Debug.Log("Set Data");
         var needFile = (LavitoData)data;
         if (needFile == null) return;
-        Debug.Log("Really Set Data");
 
         SetIsBuyInArray(_interierPositions, needFile.InterierPositions);
         SetIsBuyInArray(_avatarPositions, needFile.AvatarPositions);

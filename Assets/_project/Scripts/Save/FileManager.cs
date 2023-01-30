@@ -34,9 +34,9 @@ public class FileManager : MonoBehaviour
 
     public void ResetSaves()
     {
-        Debug.Log("Dekete in FM");
         foreach (var file in _files)
             File.Delete(Application.persistentDataPath + "/" + file.GetFileName());
+        PlayerPrefs.DeleteAll();
     }
 
     private void Read(FileAbstraction file)

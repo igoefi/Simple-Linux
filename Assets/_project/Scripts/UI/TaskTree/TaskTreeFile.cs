@@ -7,7 +7,7 @@ public class TaskTreeFile : FileAbstraction
 
     public TaskTreeFile()
     {
-        _fileName = "TaskTree.json";
+        _fileName = "TaskTree.xml";
     }
 
     public override void SetData(Data data)
@@ -21,7 +21,7 @@ public class TaskTreeFile : FileAbstraction
                 if (point.GetLevelName() == dataPoint.Name)
                 {
                     if (dataPoint.IsPassed == true)
-                        point.SetIsPassedTrue(dataPoint.Time, dataPoint.MoneyTaken);
+                        point.SetIsPassedTrue();
                     break;
                 }
     }

@@ -9,7 +9,7 @@ public class MoneyFile : FileAbstraction
 
     public static int Money { get; private set; }
 
-    MoneyFile()
+    public MoneyFile()
     {
         _fileName = "Money.xml";
         Money = 0;

@@ -5,7 +5,9 @@ using UnityEngine;
 public class TaskTreePointData 
 {
     public string Name;
-    public Time Time;
-    public float MoneyTaken;
+    public int Money;
     public bool IsPassed;
+
+    public void SetIsPassedTrue() =>
+        IsPassed = true;
 }

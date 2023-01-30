@@ -17,14 +17,14 @@ public class DialogueTriggerButtonAnim : MonoBehaviour
     public void PressEnterButton()
     {
         _trigger.SetDialogOnController();
+
+        InputSystem.EnterEvent.RemoveListener(PressEnterButton);
         StartCoroutine(Wait());
     }
 
     private IEnumerator Wait()
     {
         yield return new WaitForSeconds(_timeToWait);
-        InputSystem.EnterEvent.RemoveListener(PressEnterButton);
-        InputSystem.EnterEvent.Invoke();
         BG.SetActive(false);
     }
 }

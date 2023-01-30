@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class BeautyOutput : MonoBehaviour
 {
-    public UnityEvent EndWriteText { get; private set; } = new();
+    public static UnityEvent EndWriteText { get; private set; } = new();
 
     [SerializeField] TMP_Text _TMP;
     [SerializeField] GameObject _enterButton;

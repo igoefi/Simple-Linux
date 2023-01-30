@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_project/Scenes/MainScene.unity
     guid: 1500ec1ca6bce814ca38da25e839d4b9
   - enabled: 1
-    path: Assets/_project/Scenes/_tests/NewOutput.unity
-    guid: 7da18a4b65b58fd4b9f89737bc8eb4eb
+    path: Assets/_project/Scenes/Levels/Acquaintance.unity
+    guid: 0e46d13d12543b64980e79611eb92d2a
   m_configObjects: {}

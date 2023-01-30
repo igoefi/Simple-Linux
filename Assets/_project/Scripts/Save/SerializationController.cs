@@ -8,7 +8,6 @@ public class SerializationController : MonoBehaviour
     public static Data ReadFile(string fileName, Type type)
     {
         string filePath = Application.persistentDataPath + "/" + fileName;
-        Debug.Log(filePath);
 
         XmlSerializer serializer = new(type);
         Stream stream = File.OpenRead(filePath);

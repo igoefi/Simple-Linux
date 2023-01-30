@@ -1,0 +1,398 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &192266932101073619
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927153, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927158, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_Name
+      value: First
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828579820927158, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104828580548713650, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+--- !u!1 &9003197699370931811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9104828580548713648, guid: 6c4473ea723d06e4e836102bc5a2a8e6, type: 3}
+  m_PrefabInstance: {fileID: 192266932101073619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &427800856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9003197699370931811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30248a624ebfba548998d317dda032b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogue:
+    _phrases:
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u041C\u044F\u0443\u0432\u0435\u0442, \u043C\u0435\u043D\u044F \u0437\u043E\u0432\u0443\u0442
+        \u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442. \u0412\u0435\u043B\u0438\u043A\u0438\u0435
+        \u043C\u044F\u0443-\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u044B \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u043B\u0438
+        \u043E\u0431\u0443\u0447\u0438\u0442\u044C \u0442\u0435\u0431\u044F \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044E
+        Simple Linux. "
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u041D\u043E \u043F\u0440\u0435\u0436\u0434\u0435 \u0447\u0435\u043C
+        \u043D\u0430\u0447\u0430\u0442\u044C, \u0442\u0435\u0431\u0435 \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+        \u0440\u0430\u0437\u043E\u0431\u0440\u0430\u0442\u044C\u0441\u044F \u0441
+        \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441\u043E\u043C \u043E\u0431\u0443\u0447\u0430\u044E\u0449\u0435\u0439
+        \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0418\u0442\u0430\u043A, \u044D\u0442\u043E \u043A\u043D\u043E\u043F\u043A\u0430
+        \u043C\u0435\u043D\u044E. \u041D\u0430\u0436\u043C\u0438 \u043D\u0430 \u043D\u0435\u0451"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 1
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: 
+      _text: 
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 1
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u041C\u044F\u0443\u043B\u043E\u0434\u0435\u0446, \u0442\u0435\u043F\u0435\u0440\u044C
+        \u0441\u043C\u043E\u0442\u0440\u0438. \u0412 \u044D\u0442\u043E\u043C \u043C\u0435\u043D\u044E
+        \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C \u043E\u0442\u0440\u0435\u0433\u0443\u043B\u0438\u0440\u043E\u0432\u0430\u0442\u044C
+        \u0433\u0440\u043E\u043C\u043A\u043E\u0441\u0442\u044C \u043C\u044F\u0443-\u0437\u0432\u0443\u043A\u043E\u0432,
+        \u0432\u044B\u043A\u043B\u044E\u0447\u0438\u0442\u044C \u0438\u0433\u0440\u0443
+        \u0438\u043B\u0438 \u0441\u0431\u0440\u043E\u0441\u0438\u0442\u044C \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441. "
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0422\u043E\u043B\u044C\u043A\u043E \u0432\u0435\u043B\u0438\u043A\u0438\u0435
+        \u043C\u044F\u0443-\u043C\u0430\u0433\u0438\u0441\u0442\u0440\u044B \u0437\u043D\u0430\u044E\u0442,
+        \u0437\u0430\u0447\u0435\u043C \u0442\u0435\u0431\u0435 \u0441\u0431\u0440\u0430\u0441\u044B\u0432\u0430\u0442\u044C
+        \u043F\u0440\u043E\u0433\u0440\u0435\u0441\u0441"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u041B\u0430\u0434\u043D\u043E, \u0442\u0435\u043F\u0435\u0440\u044C
+        \u0437\u0430\u043A\u0440\u043E\u0439 \u043C\u0435\u043D\u044E"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 1
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: 
+      _text: 
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 1
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0422\u0435\u043F\u0435\u0440\u044C \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0438
+        \u0441\u044E\u0434\u0430. \u042D\u0442\u043E \u043F\u043E\u043A\u0430\u0437\u0430\u0442\u0435\u043B\u044C
+        \u0442\u043E\u0433\u043E, \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0443
+        \u0442\u0435\u0431\u044F \u043C\u044F\u0443\u043D\u0435\u0442. \u0418\u0445
+        \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C,
+        \u043F\u0440\u043E\u0445\u043E\u0434\u044F \u043C\u043E\u0438 \u0443\u0440\u043E\u043A\u0438"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u041D\u043E \u043A\u0443\u0434\u0430 \u043C\u043E\u0436\u043D\u043E
+        \u043F\u043E\u0442\u0440\u0430\u0442\u0438\u0442\u044C \u043C\u044F\u0443\u043D\u0435\u0442\u044B?
+        \u041A\u043E\u043D\u0435\u0447\u043D\u043E \u0436\u0435 \u043F\u043E\u043A\u0443\u043F\u0430\u044F
+        \u0441\u0435\u0431\u0435 \u0447\u0442\u043E-\u043D\u0438\u0431\u0443\u0434\u044C!  "
+      _audio: {fileID: 0}
+      _isHideAfterShow: 1
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u041D\u0430\u0436\u043C\u0438 \u043D\u0430 \u044D\u0442\u0443 \u043A\u043D\u043E\u043F\u043A\u0443 "
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: 
+      _text: 
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 1
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u042D\u0442\u043E Lavito. \u0422\u0443\u0442 \u043C\u043E\u0436\u043D\u043E
+        \u043A\u0443\u043F\u0438\u0442\u044C \u0447\u0442\u043E-\u0442\u043E \u0434\u043B\u044F
+        \u0438\u043D\u0442\u0435\u0440\u044C\u0435\u0440\u0430, \u0438\u043B\u0438
+        \u0436\u0435 \u043D\u043E\u0432\u044B\u0435 \u043D\u0435\u0439\u0440\u043E-\u0430\u0432\u0430\u0442\u0430\u0440\u043A\u0438
+        \u0434\u043B\u044F \u043C\u0435\u043D\u044F"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0422\u044B \u0436\u0435 \u0445\u043E\u0447\u0435\u0448\u044C, \u0447\u0442\u043E\u0431\u044B
+        \u044F \u0431\u044B\u043B \u043A\u0440\u0430\u0441\u0438\u0432\u044B\u043C?"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u041A\u0441\u0442\u0430\u0442\u0438 \u043D\u0430\u0441\u0447\u0451\u0442
+        \u044D\u0442\u043E\u0433\u043E. \u041A\u0443\u043F\u0438 \u043C\u043D\u0435
+        \u043F\u0430\u0440\u043E\u0447\u043A\u0443 \u043D\u043E\u0432\u044B\u0445
+        \u0430\u0432\u0430\u0442\u0430\u0440\u043E\u043A. \u0414\u043B\u044F \u044D\u0442\u043E\u0433\u043E
+        \u044F \u0434\u0430\u043B \u0442\u0435\u0431\u0435 \u043D\u0435\u043C\u043D\u043E\u0433\u043E
+        \u043C\u044F\u0443\u043D\u0435\u0442"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u041D\u0430\u0436\u043C\u0438 \u043D\u0430 \xAB\u0410\u0432\u0430\u0442\u0430\u0440\u043A\u0438\xBB,
+        \u043F\u043E\u0442\u043E\u043C \u043D\u0430 \u0446\u0435\u043D\u0443 \xAB\u0418\u041C\u042F_\u0410\u0412\u0410\u0422\u0410\u0420\u041A\u0418\xBB"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 1
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: 
+      _text: 
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 1
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: 
+      _text: 
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 1
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0425\u043C\u043C\u043C, \u043D\u0435\u043F\u043B\u043E\u0445\u0430\u044F
+        \u0430\u0432\u0430\u0442\u0430\u0440\u043A\u0430. \u041D\u043E \u0442\u044B
+        \u043C\u043E\u0436\u0435\u0448\u044C \u043E\u0442\u043A\u0440\u044B\u0442\u044C
+        \u0438 \u043B\u0443\u0447\u0448\u0435"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0422\u0435\u043F\u0435\u0440\u044C \u0437\u0430\u043A\u0440\u043E\u0439
+        Lavito"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 1
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: 
+      _text: 
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 1
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0422\u0430\u043A, \u0447\u0442\u043E\u0431\u044B \u0442\u0435\u0431\u0435
+        \u0431\u044B\u043B\u043E \u0443\u0434\u043E\u0431\u043D\u0435\u0435, \u0432\u0441\u0435
+        \u0437\u0430\u0434\u0430\u043D\u0438\u044F \u044F \u043C\u044F\u0443-\u0441\u043E\u0431\u0440\u0430\u043B
+        \u0432 \u0434\u0440\u0435\u0432\u0435 \u0437\u0430\u0434\u0430\u043D\u0438\u0439.
+        \u041D\u0430\u0436\u043C\u0438 \u043D\u0430 \u043D\u0435\u0433\u043E"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 1
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: 
+      _text: 
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 1
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0422\u0443\u0442 \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C
+        \u043F\u0440\u043E\u0445\u043E\u0434\u0438\u0442\u044C \u0437\u0430\u0434\u0430\u043D\u0438\u044F.
+        \u0414\u043B\u044F \u0442\u043E\u0433\u043E, \u0447\u0442\u043E\u0431\u044B
+        \u043F\u0440\u0438\u0441\u0442\u0443\u043F\u0438\u0442\u044C \u043A \u0437\u0430\u0434\u0430\u043D\u0438\u044E,
+        \u043F\u0440\u043E\u0441\u0442\u043E \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+        \u043D\u0430\u0436\u0430\u0442\u044C \u043D\u0430 \u043D\u0435\u0433\u043E. "
+      _audio: {fileID: 0}
+      _isHideAfterShow: 0
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects:
+      - {fileID: 0}
+      - {fileID: 0}
+      _usedButton: {fileID: 0}
+    - _name: "\u041D\u0435\u0439\u0440\u043E-\u043A\u043E\u0442"
+      _text: "\u0417\u043D\u0430\u043A\u043E\u043C\u0441\u0442\u0432\u043E \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043D\u043E.
+        \u0423\u0436\u0435 \u0436\u0434\u0443 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0435\u043D\u0438\u044F
+        \u043D\u0430\u0448\u0435\u0433\u043E \u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F!"
+      _audio: {fileID: 0}
+      _isHideAfterShow: 1
+      _sprite: {fileID: 0}
+      _past: 2
+      _setAwakeObjects: []
+      _usedButton: {fileID: 0}
+    _avataresFile: {fileID: 0}
+  _playOnAwake: 0
