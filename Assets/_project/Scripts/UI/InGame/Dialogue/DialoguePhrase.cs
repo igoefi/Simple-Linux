@@ -33,5 +33,6 @@ public class DialoguePhrase
     public Sprite GetSprite() { return _sprite; }
     public GameObject GetButton() { return _usedButton; }
     public void SetSprite(Sprite sprite){ if (_sprite == null) _sprite = sprite;}
+    public void SetAudio(AudioClip clip) => _audio = clip; 
     public GameObject[] GetAwakeObjects() { return _setAwakeObjects; }
 }

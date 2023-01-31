@@ -6,6 +6,7 @@ public class Dialogue
 {
     [SerializeField] DialoguePhrase[] _phrases;
     [SerializeField] LavitoPositionsFile _avataresFile;
+    [SerializeField] private AudioClip _defaultClip;
 
 
     private readonly Queue<DialoguePhrase> _phraseQueue = new();
@@ -26,13 +27,9 @@ public class Dialogue
             foreach (var phrase in _phrases)
                 phrase.SetSprite(avataresArray[rand.Next(0, avataresArray.Count)]);
         }
-        else
-        {
-            //на случай бедности
-            foreach (var phrase in _phrases)
-                if (phrase.GetSprite() == null)
-                    phrase.SetSprite(_avataresFile.GetAvatars()[0].GetSprite());
-        }
+
+        foreach (var phrase in _phrases)
+            phrase.SetAudio(_defaultClip);
 
         for (int i = 0; i < _phrases.Length; i++)
             _phraseQueue.Enqueue(_phrases[i]);

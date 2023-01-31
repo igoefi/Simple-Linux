@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DialogueController : MonoBehaviour
 {
     public static UnityEvent EndDialogue { get; private set; } = new();
+    public static UnityEvent StartDialogue { get; private set; } = new();
 
     [SerializeField] InputText _inputText;
     [SerializeField] BeautyOutput _outputText;
@@ -35,12 +36,13 @@ public class DialogueController : MonoBehaviour
         InputSystem.EnterEvent.AddListener(SkipPast);
 
         _isOutputPast = true;
+        StartDialogue.AddListener(NextTurn);
     }
 
     public static void SetDialogue(Dialogue dialogue)
     {
         if (dialogue == null) return;
-            _dialogue = dialogue;
+        _dialogue = dialogue;
     }
 
     public void NextTurn()

@@ -37,7 +37,7 @@ public class BeautyOutput : MonoBehaviour
             if(clip != null)
             {
                 _source.Stop();
-                _source.volume = Random.Range(0.8f, 1);
+                _source.pitch = Random.Range(0.6f, 1);
                 _source.Play();
             }
 
