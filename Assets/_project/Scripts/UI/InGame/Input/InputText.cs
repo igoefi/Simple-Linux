@@ -11,6 +11,8 @@ public class InputText : MonoBehaviour
     private string _needText;
     private bool _isFinish = true;
 
+
+    private bool _freeInput = false;
     private void Start()
     {
         InputSystem.DeleteEvent.AddListener(Delete);
@@ -23,11 +25,12 @@ public class InputText : MonoBehaviour
         _TMP.text = null;
     }
 
-    public void Start(string newText)
+    public void Start(string newText, bool freeInput)
     {
         _TMP.text = null;
         _isFinish = false;
         _needText = newText;
+        _freeInput = freeInput;
     }
 
     private void Delete()
@@ -38,9 +41,14 @@ public class InputText : MonoBehaviour
 
     private void CheckResult()
     {
-        if (_TMP.text != _needText || _TMP.text == null) return;
+        if (_freeInput)
+            PlayerPrefs.SetString(_needText, _TMP.text);
+
+
+        if ((_TMP.text != _needText && !_freeInput) || _TMP.text == null) return;
 
         _isFinish = true;
+        _freeInput = false;
         EndWriteText.Invoke();
     }
 

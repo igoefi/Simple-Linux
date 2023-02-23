@@ -1,12 +1,10 @@
-using System.Collections;
 using UnityEngine;
 
 public class DialogueTriggerButtonAnim : MonoBehaviour
 {
     private DialogueTrigger _trigger;
-    
+
     [SerializeField] GameObject BG;
-    [SerializeField] float _timeToWait;
 
     private void Start()
     {
@@ -19,12 +17,6 @@ public class DialogueTriggerButtonAnim : MonoBehaviour
         _trigger.SetDialogOnController();
 
         InputSystem.EnterEvent.RemoveListener(PressEnterButton);
-        StartCoroutine(Wait());
-    }
-
-    private IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(_timeToWait);
         BG.SetActive(false);
     }
 }

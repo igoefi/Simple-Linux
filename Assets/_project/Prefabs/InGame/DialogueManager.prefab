@@ -48,5 +48,3 @@ MonoBehaviour:
   _outputText: {fileID: 0}
   _sprite: {fileID: 0}
   _outputName: {fileID: 0}
-  _isCreateNewInput: 0
-  _inputIndent: {x: 0, y: 0}

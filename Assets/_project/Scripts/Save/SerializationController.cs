@@ -12,7 +12,7 @@ public class SerializationController : MonoBehaviour
         XmlSerializer serializer = new(type);
         Stream stream = File.OpenRead(filePath);
 
-        var file = (Data)serializer.Deserialize(stream);
+        Data file = (Data)serializer.Deserialize(stream);
         stream.Close();
         return file;
     }
@@ -24,8 +24,8 @@ public class SerializationController : MonoBehaviour
 
         Type type = file.GetType(); ;
 
-        var serializer = new XmlSerializer(type);
-        var writer = File.OpenWrite(filePath);
+        XmlSerializer serializer = new(type);
+        FileStream writer = File.OpenWrite(filePath);
 
         serializer.Serialize(writer, file);
         writer.Close();

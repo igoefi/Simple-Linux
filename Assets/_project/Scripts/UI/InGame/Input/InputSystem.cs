@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,7 +15,10 @@ public class InputSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Backspace))
             DeleteEvent.Invoke();
         else if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("Enter");
             EnterEvent.Invoke();
+        }
         else
             KeyEvent.Invoke(Input.inputString);
     }

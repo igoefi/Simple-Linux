@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_project/Scenes/Levels/Acquaintance.unity
     guid: 0e46d13d12543b64980e79611eb92d2a
+  - enabled: 1
+    path: Assets/_project/Scenes/Levels/First.unity
+    guid: c3bfa629957fd724aa1c751058393daf
+  - enabled: 1
+    path: Assets/_project/Scenes/Levels/FileLesson.unity
+    guid: bfa98f3de65107f45afc5a42c9e3f991
+  - enabled: 1
+    path: Assets/_project/Scenes/Levels/PuskLesson.unity
+    guid: 7f0daec49a02faf4f95a3a87b68d924b
   m_configObjects: {}

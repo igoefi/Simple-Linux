@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,7 +14,7 @@ public class LavitoPositionsFile : FileAbstraction
         _fileName = "Lavito.xml";
         SaveEvent.AddListener(Save);
     }
-    
+
     private void Save()
     {
         FileManager.Save(_fileName);
@@ -33,7 +32,7 @@ public class LavitoPositionsFile : FileAbstraction
 
     public override void SetData(Data data)
     {
-        var needFile = (LavitoData)data;
+        LavitoData needFile = (LavitoData)data;
         if (needFile == null) return;
 
         SetIsBuyInArray(_interierPositions, needFile.InterierPositions);
@@ -44,7 +43,7 @@ public class LavitoPositionsFile : FileAbstraction
 
     public override Data GetData()
     {
-        var data = new LavitoData();
+        LavitoData data = new();
         data.SetInterierPosition(_interierPositions);
         data.SetAvatarPosition(_avatarPositions);
 
@@ -53,8 +52,8 @@ public class LavitoPositionsFile : FileAbstraction
 
     private void SetIsBuyInArray(LavitoPosition[] positions, List<LavitoPositionData> dataPositions)
     {
-        foreach (var position in positions)
-            foreach (var dataPosition in dataPositions)
+        foreach (LavitoPosition position in positions)
+            foreach (LavitoPositionData dataPosition in dataPositions)
                 if (position.GetName() == dataPosition.Name)
                 {
                     if (dataPosition.IsBuy == true)

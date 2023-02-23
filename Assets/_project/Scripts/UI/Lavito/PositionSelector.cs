@@ -58,7 +58,7 @@ public class PositionSelector : MonoBehaviour
 
     public void ResetPositions()
     {
-        foreach (var position in _positions)
+        foreach (Position position in _positions)
             position.BuyUpdate();
     }
 

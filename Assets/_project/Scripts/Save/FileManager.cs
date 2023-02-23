@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.IO;
 using UnityEngine;
 
@@ -27,14 +26,14 @@ public class FileManager : MonoBehaviour
 
     public static void Save(string fileName)
     {
-        foreach (var file in _staticFiles)
+        foreach (FileAbstraction file in _staticFiles)
             if (file.GetFileName() == fileName)
                 SerializationController.SaveFile(file.GetData(), fileName);
     }
 
     public void ResetSaves()
     {
-        foreach (var file in _files)
+        foreach (FileAbstraction file in _files)
             File.Delete(Application.persistentDataPath + "/" + file.GetFileName());
         PlayerPrefs.DeleteAll();
     }
@@ -49,7 +48,7 @@ public class FileManager : MonoBehaviour
 
     private Type GetDataFileType(FileAbstraction file)
     {
-        var type = file.GetType();
+        Type type = file.GetType();
 
         if (type == typeof(LavitoPositionsFile))
             return typeof(LavitoData);

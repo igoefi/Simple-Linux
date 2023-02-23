@@ -29,7 +29,6 @@ public class LobbyUIAPI : MonoBehaviour
 
     public void ResetSaves()
     {
-        Debug.Log("Dekete in API");
         _manager.ResetSaves();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

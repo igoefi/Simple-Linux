@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class TaskTreeFile : FileAbstraction
 {
@@ -12,12 +11,12 @@ public class TaskTreeFile : FileAbstraction
 
     public override void SetData(Data data)
     {
-        var needFile = (TaskTreeData)data;
+        TaskTreeData needFile = (TaskTreeData)data;
 
         if (needFile == null) return;
 
-        foreach(var point in _points)
-            foreach(var dataPoint in needFile._points)
+        foreach (TaskTreePoint point in _points)
+            foreach (TaskTreePointData dataPoint in needFile._points)
                 if (point.GetLevelName() == dataPoint.Name)
                 {
                     if (dataPoint.IsPassed == true)
@@ -34,7 +33,7 @@ public class TaskTreeFile : FileAbstraction
 
     public override Data GetData()
     {
-        var data = new TaskTreeData();
+        TaskTreeData data = new();
         data.SetTaskTreePoint(_points);
 
         return data;

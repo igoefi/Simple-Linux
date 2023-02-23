@@ -1,20 +1,21 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour
 {
-    public static UnityEvent EndDialogue { get; private set; } = new();
-    public static UnityEvent StartDialogue { get; private set; } = new();
+    public static UnityEvent EndDialogueEvent { get; private set; } = new();
+    public static UnityEvent StartDialogueEvent { get; private set; } = new();
+
+    private static readonly UnityEvent _rightClickEvent = new();
 
     [SerializeField] InputText _inputText;
     [SerializeField] BeautyOutput _outputText;
     [SerializeField] Image _sprite;
     [SerializeField] TMPro.TMP_Text _outputName;
-
-    [SerializeField] bool _isCreateNewInput = false;
-    [SerializeField] Vector2 _inputIndent;
 
     public bool IsInDialogue { get; private set; } = false;
 
@@ -22,21 +23,24 @@ public class DialogueController : MonoBehaviour
 
     private GameObject _needToPressButton;
 
-    private bool _start = false;
-
     private bool _isOutputPast;
+
+    private bool _isRightMousePast;
 
     private void Start()
     {
         _dialogue = null;
 
-        if(_inputText != null)
+        if (_inputText != null) 
             _inputText.EndWriteText.AddListener(NextTurn);
 
         InputSystem.EnterEvent.AddListener(SkipPast);
 
         _isOutputPast = true;
-        StartDialogue.AddListener(NextTurn);
+        StartDialogueEvent.AddListener(NextTurn);
+
+        _isRightMousePast = false;
+        _rightClickEvent.AddListener(RightMouseNextDialogue);
     }
 
     public static void SetDialogue(Dialogue dialogue)
@@ -45,11 +49,13 @@ public class DialogueController : MonoBehaviour
         _dialogue = dialogue;
     }
 
+    public static void RightClickDialogue() => _rightClickEvent.Invoke();
+
     public void NextTurn()
     {
-        Debug.Log("Next");
         if (_dialogue == null) return;
-        var phrases = _dialogue.GetPhraseQueue();
+
+        Queue<DialoguePhrase> phrases = _dialogue.GetPhraseQueue();
 
         IsInDialogue = true;
 
@@ -57,12 +63,12 @@ public class DialogueController : MonoBehaviour
 
         if (phrases.Count == 0)
         {
-            if(_inputText != null)
+            if (_inputText != null)
                 _inputText.Restart();
 
             _dialogue = null;
             IsInDialogue = false;
-            EndDialogue.Invoke();
+            EndDialogueEvent.Invoke();
         }
     }
 
@@ -74,20 +80,19 @@ public class DialogueController : MonoBehaviour
 
     public void SkipPast()
     {
-        if (_isOutputPast && _dialogue != null)
+        if (!_isOutputPast || _dialogue == null) return;
+            _isOutputPast = false;
             NextTurn();
+
     }
 
-    private void CreateNewInput()
+    public void RightMouseNextDialogue()
     {
-        InputText input = Instantiate(_inputText, _inputText.transform);
-        input.transform.position = _inputText.transform.position;
-        input.transform.localScale = _inputText.transform.localScale;
-
-        _inputText.transform.position += (Vector3)_inputIndent;
-
-        Destroy(_inputText.GetComponent<InputSystem>());
-        _inputText = input;
+        if (_isRightMousePast)
+        {
+            _isRightMousePast = false;
+            NextTurn();
+        }
     }
 
     private void PhraseWork(DialoguePhrase phrase)
@@ -107,7 +112,7 @@ public class DialogueController : MonoBehaviour
                 if (_sprite != null)
                     _sprite.sprite = phrase.GetSprite();
 
-                if(phrase.GetIsHideAfter())
+                if (phrase.GetIsHideAfter())
                     BeautyOutput.EndWriteText.AddListener(NextTurn);
 
                 _isOutputPast = true;
@@ -115,22 +120,21 @@ public class DialogueController : MonoBehaviour
 
 
             case DialoguePhrase.Past.InputText:
-                if (_start)
-                {
-                    if (_isCreateNewInput)
-                        CreateNewInput();
-                    _inputText.Start(phrase.GetText());
-                }
+
+                if (phrase.GetText().Count() == 0)
+                    _inputText.Start(phrase.GetName(), true);
                 else
-                {
-                    _inputText.Start(phrase.GetText());
-                    _start = true;
-                }
+                    _inputText.Start(phrase.GetText(), false);
+
                 break;
 
 
             case DialoguePhrase.Past.InputButton:
                 _needToPressButton = phrase.GetButton();
+                break;
+
+            case DialoguePhrase.Past.RightMouseButton:
+                _isRightMousePast = true;
                 break;
         }
 
@@ -139,7 +143,7 @@ public class DialogueController : MonoBehaviour
 
     private void SetActiveObjects(GameObject[] objects)
     {
-        foreach (var obj in objects)
+        foreach (GameObject obj in objects)
             obj.SetActive(!obj.activeSelf);
     }
 }

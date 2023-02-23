@@ -37,7 +37,7 @@ public class LavitoPosition
         return _image;
     }
 
-    public bool Compare(string name) 
+    public bool Compare(string name)
     {
         return name == _name;
     }

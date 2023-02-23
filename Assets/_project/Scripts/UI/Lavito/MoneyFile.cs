@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.Events;
 
 public class MoneyFile : FileAbstraction
@@ -27,7 +24,7 @@ public class MoneyFile : FileAbstraction
 
     public override void SetData(Data data)
     {
-        var needFile = (MoneyData)data;
+        MoneyData needFile = (MoneyData)data;
         if (needFile == null) return;
 
         Money = needFile.Money;

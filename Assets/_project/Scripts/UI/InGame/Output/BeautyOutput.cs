@@ -17,10 +17,15 @@ public class BeautyOutput : MonoBehaviour
 
     Coroutine _writeCorutine = null;
 
+    private void Start()
+    {
+        EndWriteText.RemoveAllListeners();
+    }
+
     public void SetText(string text, AudioClip clip)
     {
         _TMP.text = null;
-        if(_writeCorutine != null)
+        if (_writeCorutine != null)
             StopCoroutine(_writeCorutine);
         _writeCorutine = StartCoroutine(Write(text, clip));
     }
@@ -34,7 +39,7 @@ public class BeautyOutput : MonoBehaviour
 
         foreach (char letter in text)
         {
-            if(clip != null)
+            if (clip != null)
             {
                 _source.Stop();
                 _source.pitch = Random.Range(0.6f, 1);

@@ -93,10 +93,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6866945413837339601, guid: 827d054039a744b4193f9abb14a6eeb1, type: 3}
       propertyPath: m_Name
-      value: TaskCompletion
+      value: TaskCompletion Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 6866945413837339601, guid: 827d054039a744b4193f9abb14a6eeb1, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 6866945413934888903, guid: 827d054039a744b4193f9abb14a6eeb1, type: 3}
+      propertyPath: m_text
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

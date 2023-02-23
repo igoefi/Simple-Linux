@@ -9020,6 +9020,7 @@ GameObject:
   - component: {fileID: 1572122277}
   - component: {fileID: 1572122281}
   - component: {fileID: 1572122282}
+  - component: {fileID: 1572122283}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -9145,6 +9146,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edbd8d43f48211c429074194d0e8b2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1572122283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572122276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed750a335d9e11a43890a622a13e1c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1597495540
@@ -11645,6 +11658,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 212470008}
     - target: {fileID: 427800856, guid: fcdc2075debc6d147a1d6aabd7820ecc, type: 3}
+      propertyPath: _dialogue._defaultSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c35933d0cbacc714fa504edc1602def5, type: 3}
+    - target: {fileID: 427800856, guid: fcdc2075debc6d147a1d6aabd7820ecc, type: 3}
       propertyPath: _dialogue._phrases.Array.size
       value: 26
       objectReference: {fileID: 0}
@@ -12077,6 +12094,10 @@ PrefabInstance:
     - target: {fileID: 4979079557975418641, guid: 7a39b110c39417a47b9f309ec36d88b0, type: 3}
       propertyPath: m_Name
       value: TaskCompletion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4979079557975418641, guid: 7a39b110c39417a47b9f309ec36d88b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a39b110c39417a47b9f309ec36d88b0, type: 3}

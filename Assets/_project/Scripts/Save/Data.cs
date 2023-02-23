@@ -1,7 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UIElements;
 
 [System.Serializable]
 public abstract class Data
@@ -21,13 +18,13 @@ public class LavitoData : Data
     public void SetInterierPosition(LavitoPosition[] positions)
     {
         InterierPositions = new();
-        foreach (var position in positions)
+        foreach (LavitoPosition position in positions)
             InterierPositions.Add(new LavitoPositionData { Name = position.GetName(), IsBuy = position.IsBuy });
     }
     public void SetAvatarPosition(LavitoPosition[] positions)
     {
         AvatarPositions = new();
-        foreach (var position in positions)
+        foreach (LavitoPosition position in positions)
             AvatarPositions.Add(new LavitoPositionData { Name = position.GetName(), IsBuy = position.IsBuy });
     }
 }
@@ -40,7 +37,7 @@ public class TaskTreeData : Data
     public void SetTaskTreePoint(TaskTreePoint[] points)
     {
         _points = new();
-        foreach (var point in points)
+        foreach (TaskTreePoint point in points)
             _points.Add(new TaskTreePointData
             {
                 Name = point.GetLevelName(),

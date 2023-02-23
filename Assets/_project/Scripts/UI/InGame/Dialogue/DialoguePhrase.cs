@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 [System.Serializable]
@@ -22,7 +19,8 @@ public class DialoguePhrase
     {
         InputText,
         InputButton,
-        Output
+        Output,
+        RightMouseButton
     }
 
     public string GetName() { return _name; }
@@ -32,7 +30,7 @@ public class DialoguePhrase
     public bool GetIsHideAfter() { return _isHideAfterShow; }
     public Sprite GetSprite() { return _sprite; }
     public GameObject GetButton() { return _usedButton; }
-    public void SetSprite(Sprite sprite){ if (_sprite == null) _sprite = sprite;}
-    public void SetAudio(AudioClip clip) => _audio = clip; 
+    public void SetSprite(Sprite sprite) { if (_sprite == null) _sprite = sprite; }
+    public void SetAudio(AudioClip clip) { if (_audio == null) _audio = clip; }
     public GameObject[] GetAwakeObjects() { return _setAwakeObjects; }
 }
