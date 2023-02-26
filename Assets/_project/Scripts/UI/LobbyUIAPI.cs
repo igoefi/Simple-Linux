@@ -24,6 +24,9 @@ public class LobbyUIAPI : MonoBehaviour
         _BGImage.SetActive(false);
     }
 
+    public void OnlyCloseWindow(GameObject window) =>
+        window.SetActive(false);
+
     public void CloseGame() =>
         Application.Quit();
 

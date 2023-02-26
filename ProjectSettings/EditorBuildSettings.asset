@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_project/Scenes/Levels/PuskLesson.unity
     guid: 7f0daec49a02faf4f95a3a87b68d924b
+  - enabled: 1
+    path: Assets/_project/Scenes/Levels/BrowserLesson.unity
+    guid: bb5ab6e1f0405cf4a9e0ceb71dad12e3
   m_configObjects: {}

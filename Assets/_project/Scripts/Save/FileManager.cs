@@ -11,12 +11,11 @@ public class FileManager : MonoBehaviour
     {
         _staticFiles = _files;
         foreach (FileAbstraction file in _files)
-        {
             if (File.Exists(Application.persistentDataPath + "/" + file.GetFileName()))
                 Read(file);
-            else
-                Save(file);
-        }
+
+        foreach (FileAbstraction file in _files)
+            Save(file);
     }
 
     public static void Save(FileAbstraction file)

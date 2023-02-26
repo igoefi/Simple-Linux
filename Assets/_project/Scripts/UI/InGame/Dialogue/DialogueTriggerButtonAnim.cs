@@ -8,15 +8,17 @@ public class DialogueTriggerButtonAnim : MonoBehaviour
 
     private void Start()
     {
-        InputSystem.EnterEvent.AddListener(PressEnterButton);
+        InputSystem.EnterEvent.AddListener(PressEnter);
         _trigger = GetComponent<DialogueTrigger>();
     }
 
-    public void PressEnterButton()
+    public void PressButton() => InputSystem.EnterEvent.Invoke();
+
+    public void PressEnter()
     {
         _trigger.SetDialogOnController();
 
-        InputSystem.EnterEvent.RemoveListener(PressEnterButton);
+        InputSystem.EnterEvent.RemoveListener(PressEnter);
         BG.SetActive(false);
     }
 }

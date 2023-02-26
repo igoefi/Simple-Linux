@@ -47,6 +47,7 @@ public class DialogueController : MonoBehaviour
     {
         if (dialogue == null) return;
         _dialogue = dialogue;
+        StartDialogueEvent.Invoke();
     }
 
     public static void RightClickDialogue() => _rightClickEvent.Invoke();
