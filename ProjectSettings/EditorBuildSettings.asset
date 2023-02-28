@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_project/Scenes/Levels/BrowserLesson.unity
     guid: bb5ab6e1f0405cf4a9e0ceb71dad12e3
+  - enabled: 1
+    path: Assets/_project/Scenes/Levels/FileManagerLesson.unity
+    guid: c6f11cb72e444494687c7aa2b108c5de
   m_configObjects: {}

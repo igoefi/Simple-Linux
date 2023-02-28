@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -41,11 +42,12 @@ public class InputText : MonoBehaviour
 
     private void CheckResult()
     {
+        if(_isFinish) return;
         if (_freeInput)
             PlayerPrefs.SetString(_needText, _TMP.text);
 
 
-        if ((_TMP.text != _needText && !_freeInput) || _TMP.text == null) return;
+        if ((_TMP.text != _needText && !_freeInput) || string.IsNullOrEmpty(_TMP.text)) return;
 
         _isFinish = true;
         _freeInput = false;
